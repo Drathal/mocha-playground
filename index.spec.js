@@ -10,6 +10,22 @@ describe('getNextPageUrl', function () {
     expect(getNextPageUrl(link)).to.equal('https://api.github.com/repositories/21779020/stargazers?page=2')
   })
 
+  it('should ...1', function () {
+    expect(getNextPageUrl(null)).to.equal(null)
+  })
+
+  it('should ...2', function () {
+    expect(getNextPageUrl('')).to.equal(null)
+  })
+
+  it('should ...3', function () {
+    expect(getNextPageUrl('--test--')).to.equal(null)
+  })
+
+  it('should ...4', function () {
+    expect(getNextPageUrl('<--,test;-->')).to.equal(null)
+  })
+
 })
 
 describe('getNextPageUrl - snapshot', function () {
@@ -20,6 +36,7 @@ describe('getNextPageUrl - snapshot', function () {
 
 })
 
+/*
 describe('getNextPageUrl - snapshot (fatArrow)', () => {
 
   it('should return the link', () => {
@@ -27,3 +44,4 @@ describe('getNextPageUrl - snapshot (fatArrow)', () => {
   })
 
 })
+*/
