@@ -1,0 +1,9 @@
+./**/*.spec.js
+--slow 500
+--timeout 1000
+--reporter spec
+--reporter-options stack-exclude=**/node_modules/**
+--compilers js:babel-core/register
+--require ./test/helper
+--recursive
+--watch-extensions js
