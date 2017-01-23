@@ -14,7 +14,7 @@ module.exports = function (chai) {
 
     if (!fs.existsSync(snapshotfile)) {
       fs.writeFileSync(snapshotfile.trim(), pretty(this._obj).trim())
-      assert(true)
+      chai.assert(true)
       return
     }
 
